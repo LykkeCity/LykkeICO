@@ -200,6 +200,10 @@ p {
   &--select {
     cursor: pointer;
 
+    option {
+      color: #000;
+    }
+
     ~ .icon--select_icn {
       position: absolute;
       top: 50%;

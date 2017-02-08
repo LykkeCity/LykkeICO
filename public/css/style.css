@@ -304,6 +304,8 @@ p { letter-spacing: 0; color: rgba(255, 255, 255, 0.8); font-size: 18px; font-si
 
 .form-control--select { cursor: pointer; }
 
+.form-control--select option { color: #000; }
+
 .form-control--select ~ .icon--select_icn { position: absolute; top: 50%; color: rgba(255, 255, 255, 0.2); font-size: 16px; font-size: 1rem; margin-top: -4px; margin-top: -0.25rem; font-size: 9px; font-size: 0.5625rem; right: 19px; right: 1.1875rem; }
 
 label.error { font-weight: normal; color: rgba(224, 56, 56, 0.57); margin-top: 2px; position: absolute; left: 0; bottom: 0; font-size: 14px; font-size: 0.875rem; }
