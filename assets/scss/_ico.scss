@@ -140,16 +140,25 @@ p {
   padding-left: 0;
   padding-right: 0;
   color: #fff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 
   @include rem(font-size, 20px);
   @include rem(padding-top, 40px);
   @include rem(padding-bottom, 18px);
   @include rem(height, 90px);
 
-  + .control-label {
+  ~ .control-label {
     position: absolute;
+    left: 0;
 
     @include rem(top, 36px);
+  }
+
+  &.error {
+    box-shadow: 0 1px 0 0 rgba(224, 56, 56, 0.57) !important;
+    border-bottom-color: rgba(224, 56, 56, 0.57) !important;
   }
 
   &:focus {
@@ -157,7 +166,7 @@ p {
     border-bottom-color: #f8af34;
     box-shadow: 0 1px 0 0 #f8af34;
 
-    + .control-label {
+    ~ .control-label {
       color: #f8af34;
 
       @include rem(top, 27px);
@@ -166,16 +175,14 @@ p {
   }
 
   &--focus {
-    + .control-label {
+    ~ .control-label {
       @include rem(top, 27px);
       @include rem(font-size, 12px);
     }
   }
   
   &--select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+    cursor: pointer;
 
     ~ .icon--select_icn {
       position: absolute;
@@ -188,6 +195,17 @@ p {
       @include rem(right, 19px);
     }
   }
+}
+
+label.error {
+  font-weight: normal;
+  color: rgba(224, 56, 56, 0.57);
+  margin-top: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  @include rem(font-size, 14px);
 }
 
 .control-label {
@@ -255,6 +273,12 @@ p {
   }
 }
 
+.success_text {
+  h3 {
+    margin-bottom: 0;
+  }
+}
+
 .form-control ~ .input-group-addon {
   right: 0;
   left: auto;
@@ -314,6 +338,17 @@ p {
     }
   }
 
+  &--inverse {
+    background-color: #000 !important;
+    font-weight: $fw-semi;
+    color: #f8af34 !important;
+    cursor: default;
+
+    @include rem(letter-spacing, 2px);
+    @include rem(font-size, 18px);
+    @include rem(padding, 22px 54px 20px);
+  }
+
   &--stroke {
     border: 1px solid rgba(#fff, .3);
     color: rgba(#fff, .5);
@@ -337,6 +372,10 @@ p {
   @include rem(margin-bottom, 40px);
 }
 
+.ico_main {
+  @include rem(margin-bottom, 20px);
+}
+
 .files_link {
   @include rem(margin-bottom, 120px);
 
@@ -345,11 +384,23 @@ p {
   }
 
   @media all and (max-width: $screen-mobile-tiny) {
+    margin-bottom: 30px;
+
     .btn {
       margin-right: 0;
       margin-bottom: 15px;
       width: 100%;
     }
+  }
+}
+
+.btn_success {
+  display: none;
+}
+
+.form-success {
+  .btn_success {
+    display: block;
   }
 }
 

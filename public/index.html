@@ -30,7 +30,7 @@
   <meta name="twitter:image:src" content="image URL">-->
 
   <link rel="stylesheet" href="css/vendor/bootstrap-custom.min.css">
-  <link rel="stylesheet" href="css/style.css?v5">
+  <link rel="stylesheet" href="css/style.css?v6">
 
   <!--[if lte IE 9]>
   <script type="text/javascript" src="js/vendor/html5shiv.js"></script>
@@ -108,10 +108,11 @@
     </section>
 
     <section class="ico_section ico_section--form" style="display: none" id="form">
-      <button type="button" class="btn_close _hide_this_form"></button>
 
       <div class="container">
-        <form action="" class="form">
+        <form action="" class="form" id="form_ico">
+          <button type="button" class="btn_close _hide_this_form"></button>
+
           <h3>1-year Lykke Forward Purchase Agreement</h3>
           <p>Lykke Corp herewith sells to the undersigned and the undersigned herewith acquires,</p>
           <p>1-year Lykke coins in the amount of:</p>
@@ -162,29 +163,29 @@
           <h4>The Undersigned</h4>
 
           <div class="form-group">
-            <input type="text" id="name" class="form-control" value="Lena">
+            <input type="text" id="name" name="name" class="form-control" value="Lena" required>
             <label for="name" class="control-label">(Company) Name</label>
           </div>
 
           <div class="form-group">
-            <input type="text" id="street" class="form-control">
+            <input type="text" id="street" name="street" class="form-control" required>
             <label for="street" class="control-label">Street</label>
           </div>
 
           <div class="form-group">
-            <input type="text" id="city" class="form-control">
+            <input type="text" id="city" class="form-control" required>
             <label for="city" class="control-label">Post Code/City</label>
           </div>
 
           <div class="form-group">
-            <input type="text" id="country" class="form-control">
+            <input type="text" id="country" name="country" class="form-control" required>
             <label for="country" class="control-label">Country</label>
           </div>
 
           <p>The 1-year Lykke coins shall be credited to the Lykke wallet which was created with the following email address:</p>
 
           <div class="form-group">
-            <input type="text" id="email" class="form-control">
+            <input type="text" id="email" name="email" class="form-control" required>
             <label for="email" class="control-label">Email used to register Lykke Wallet</label>
           </div>
 
@@ -192,6 +193,10 @@
             <button class="btn btn--primary btn-block">Submit</button>
           </div>
         </form>
+
+        <div class="success_text text-center" style="display: none">
+          <h3>Thank you for submitting your order!</h3>
+        </div>
       </div>
     </section>
   </article>
@@ -291,8 +296,9 @@
 </body>
 
 <script src="js/vendor/jquery.min.js"></script>
-<script src="js/vendor/clipboard.min.js"></script>
 <script src="js/vendor/jquery.inview.min.js"></script>
+<script src="js/vendor/jquery.validate.min.js"></script>
+<script src="js/vendor/clipboard.min.js"></script>
 <script src="js/vendor/bootstrap.min.js"></script>
 
 <script>
@@ -334,6 +340,27 @@
     clipboard.on('success', function(e) {
       e.trigger.innerHTML =  '<i class="icon icon--check"></i>';
       e.clearSelection();
+    });
+  });
+
+  $(document).ready(function () {
+
+    var $form = $('#form_ico');
+    $form.validate({
+      submitHandler: function(form) {
+        $.ajax({
+          success: function(response) {
+            $form.animate({
+              height: "toggle",
+              opacity: "toggle"
+            });
+
+            $('.success_text').animate({
+              opacity: "toggle"
+            });
+          }
+        });
+      }
     });
   });
 
