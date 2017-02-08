@@ -464,11 +464,12 @@ p {
     left: 0;  right: 0;
     margin: auto;
     height: 1px;
-    width: 40px;
     background: currentColor;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+
+    @include rem(width, 40px);
   }
 
   &:after {

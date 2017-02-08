@@ -385,7 +385,7 @@ p { letter-spacing: 0; color: rgba(255, 255, 255, 0.8); font-size: 18px; font-si
 
 .btn_close:hover, .modal__close:hover { opacity: .75; }
 
-.btn_close:after, .modal__close:after, .btn_close:before, .modal__close:before { content: ''; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; height: 1px; width: 40px; background: currentColor; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); }
+.btn_close:after, .modal__close:after, .btn_close:before, .modal__close:before { content: ''; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; height: 1px; background: currentColor; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); width: 40px; width: 2.5rem; }
 
 .btn_close:after, .modal__close:after { -webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg); }
 
