@@ -30,7 +30,7 @@
   <meta name="twitter:image:src" content="image URL">-->
 
   <link rel="stylesheet" href="css/vendor/bootstrap-custom.min.css">
-  <link rel="stylesheet" href="css/style.css?v6">
+  <link rel="stylesheet" href="css/style.css?v1">
 
   <!--[if lte IE 9]>
   <script type="text/javascript" src="js/vendor/html5shiv.js"></script>
@@ -53,7 +53,7 @@
 
   <header class="ico_header ico_section_anim">
     <div class="ico_header__img anim step1">
-      <img src="img/lykke_coin_cc.png" width="960" alt="Lykke ICO">
+      <img src="img/lykke_coin_cc.png" width="480" alt="Lykke ICO">
     </div>
     <div class="container">
       <h1 class="ico_header__title anim step2">1-year Lykke forward offering</h1>
@@ -193,10 +193,6 @@
             <button class="btn btn--primary btn-block">Submit</button>
           </div>
         </form>
-
-        <div class="success_text text-center" style="display: none">
-          <h3>Thank you for submitting your order!</h3>
-        </div>
       </div>
     </section>
   </article>
@@ -344,24 +340,8 @@
   });
 
   $(document).ready(function () {
-
     var $form = $('#form_ico');
-    $form.validate({
-      submitHandler: function(form) {
-        $.ajax({
-          success: function(response) {
-            $form.animate({
-              height: "toggle",
-              opacity: "toggle"
-            });
-
-            $('.success_text').animate({
-              opacity: "toggle"
-            });
-          }
-        });
-      }
-    });
+    $form.validate();
   });
 
 </script>

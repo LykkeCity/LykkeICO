@@ -108,6 +108,22 @@ p {
     @include rem(line-height, 35px);
     @include rem(letter-spacing, 4px);
   }
+
+  &--success {
+    @include rem(padding-top, 235px);
+    @include rem(padding-bottom, 235px);
+
+    h3 {
+      @include rem(margin-bottom, 50px);
+    }
+  }
+
+  @media all and (max-height: 800px) {
+    &--success {
+      @include rem(padding-top, 80px);
+      @include rem(padding-bottom, 80px);
+    }
+  }
 }
 
 .ico_table {
