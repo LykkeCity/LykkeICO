@@ -441,37 +441,11 @@ p {
   }
 }
 
-.modal {
-  &--qrbar {
-    text-align: center;
-    margin: 0;
-    max-width: 100%;
-
-    .modal__content {
-      margin-top: 0;
-      padding-right: 0;
-
-      @include rem(font-size, 18px);
-
-      img {
-        @include rem(margin-bottom, 30px);
-      }
-
-      .accent {
-        font-weight: $fw-semi;
-
-        @include rem(margin-bottom, 15px);
-        @include rem(font-size, 20px);
-      }
-    }
-  }
-}
-
 .btn_close {
   position: absolute;
   border: none;
   background-color: transparent;
-  color: #f8af34;
+  color: rgba(#fff, .4);
   cursor: pointer;
   -webkit-transition: .25s;
   transition: .25s;
@@ -507,8 +481,46 @@ p {
 .modal {
   color: #212121;
 
+  &--qrbar {
+    text-align: center;
+    margin: 0;
+    max-width: 100%;
+
+    .modal__content {
+      margin-top: 0;
+      padding-right: 0;
+
+      @include rem(font-size, 18px);
+
+      img {
+        @include rem(margin-bottom, 30px);
+      }
+
+      .accent {
+        font-weight: $fw-semi;
+
+        @include rem(margin-bottom, 15px);
+        @include rem(font-size, 20px);
+      }
+    }
+  }
+
   .btn_close {
     color: #fff;
+    top: 100%;
+    right: 0 ;
+    left: 0;
+    border-radius: 100px;
+    border: 1px solid #fff;
+
+    @include rem(width, 60px);
+    @include rem(height, 60px);
+    @include rem(padding, 10px);
+    @include rem(margin, 20px auto 0);
+
+    &:hover {
+      @include transform(none !important);
+    }
   }
 
   &__body {

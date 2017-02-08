@@ -381,15 +381,7 @@ p { letter-spacing: 0; color: rgba(255, 255, 255, 0.8); font-size: 18px; font-si
 
 .ico_social .ya-share2__container_size_m .ya-share2__icon { width: 30px; width: 1.875rem; height: 30px; height: 1.875rem; background-size: 30px !important; background-size: 1.875rem !important; }
 
-.modal--qrbar { text-align: center; margin: 0; max-width: 100%; }
-
-.modal--qrbar .modal__content { margin-top: 0; padding-right: 0; font-size: 18px; font-size: 1.125rem; }
-
-.modal--qrbar .modal__content img { margin-bottom: 30px; margin-bottom: 1.875rem; }
-
-.modal--qrbar .modal__content .accent { font-weight: 600; margin-bottom: 15px; margin-bottom: 0.9375rem; font-size: 20px; font-size: 1.25rem; }
-
-.btn_close, .modal__close { position: absolute; border: none; background-color: transparent; color: #f8af34; cursor: pointer; -webkit-transition: .25s; transition: .25s; width: 40px; width: 2.5rem; height: 40px; height: 2.5rem; top: 20px; top: 1.25rem; right: 20px; right: 1.25rem; }
+.btn_close, .modal__close { position: absolute; border: none; background-color: transparent; color: rgba(255, 255, 255, 0.4); cursor: pointer; -webkit-transition: .25s; transition: .25s; width: 40px; width: 2.5rem; height: 40px; height: 2.5rem; top: 20px; top: 1.25rem; right: 20px; right: 1.25rem; }
 
 .btn_close:hover, .modal__close:hover { opacity: .75; }
 
@@ -399,7 +391,17 @@ p { letter-spacing: 0; color: rgba(255, 255, 255, 0.8); font-size: 18px; font-si
 
 .modal { color: #212121; }
 
-.modal .btn_close, .modal .modal__close { color: #fff; }
+.modal--qrbar { text-align: center; margin: 0; max-width: 100%; }
+
+.modal--qrbar .modal__content { margin-top: 0; padding-right: 0; font-size: 18px; font-size: 1.125rem; }
+
+.modal--qrbar .modal__content img { margin-bottom: 30px; margin-bottom: 1.875rem; }
+
+.modal--qrbar .modal__content .accent { font-weight: 600; margin-bottom: 15px; margin-bottom: 0.9375rem; font-size: 20px; font-size: 1.25rem; }
+
+.modal .btn_close, .modal .modal__close { color: #fff; top: 100%; right: 0; left: 0; border-radius: 100px; border: 1px solid #fff; width: 60px; width: 3.75rem; height: 60px; height: 3.75rem; padding: 10px; padding: 0.625rem; margin: 20px auto 0; margin: 1.25rem auto 0; }
+
+.modal .btn_close:hover, .modal .modal__close:hover { -webkit-transform: none !important; -moz-transform: none !important; -ms-transform: none !important; -o-transform: none !important; transform: none !important; }
 
 .modal__body { background-color: #fff; border: 1px solid rgba(207, 210, 215, 0.3); border-radius: 4px; max-width: 100%; top: 50%; left: 0; right: 0; position: absolute; width: 420px; width: 26.25rem; margin: -215px auto 0; margin: -13.4375rem auto 0; }
 
