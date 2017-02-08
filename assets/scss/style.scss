@@ -1,0 +1,29 @@
+@import "../../node_modules/compass-mixins/lib/compass/functions";
+@import "../../node_modules/compass-mixins/lib/compass/utilities";
+@import "../../node_modules/compass-mixins/lib/compass/css3";
+
+
+// necessary for all pages
+@import '../../node_modules/LykkeFramework/assets/scss/common/fonts';
+@import '../../node_modules/LykkeFramework/assets/scss/common/variables';
+@import '../../node_modules/LykkeFramework/assets/scss/common/mixins';
+@import '../../node_modules/LykkeFramework/assets/scss/common/general';
+@import '../../node_modules/LykkeFramework/assets/scss/common/typo';
+@import '../../node_modules/LykkeFramework/assets/scss/common/helpers';
+@import '../../node_modules/LykkeFramework/assets/scss/partials/social';
+
+
+@import 'icons';
+@import 'modals';
+@import 'ico';
+
+@media (max-width: 543px) {
+  html {
+    font-size: 10px;
+  }
+
+  .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
